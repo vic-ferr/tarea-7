@@ -41,19 +41,11 @@ const getRicAndkMorty = (async () => {
 const iterarApi = (dat) => {
   dat.results.forEach((personajes) => {
     const personajesApi = new Comic(
-      personajes.image,
       personajes.name,
-      personajes.especie
+      personajes.species,
+      personajes.image
     );
-
-    cards.innerHTML += `<article class="card text-center shadow col-12 col-md-6 col-lg-3 mt-2">
-         <img src="${personajes.image}" class="card-img-top" alt="${personajes.name}" />
-         <div class="card-body">
-         <h3 class="card-text">${personajes.name}</h3>
-         <p class="card-text">${personajes.species}</p>
-         </div>
-         </article>
-        `;
+    personajesApi.show();
   });
 };
 
