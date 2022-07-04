@@ -15,8 +15,8 @@ class Comic {
     return this._image();
   }
 
-  show() {
-    cards.innerHTML += `<article class="card text-center shadow col-12 col-md-6 col-lg-3 mt-2">
+  show(myCard) {
+    myCard.innerHTML += `<article class="card text-center shadow col-12 col-md-6 col-lg-3 mt-2">
           <img src="${this.image}" class="card-img-top" alt="${this.name}">
           <div class="card-body">
           <h3 class="card-text">${this.name}</h3>

@@ -32,6 +32,7 @@ const getRicAndkMorty = (async () => {
     const URL = "https://rickandmortyapi.com/api/character/";
     const request = await fetch(URL);
     const data = await request.json();
+    console.log(data);
     iterarApi(data);
   } catch (error) {
     console.error(error);
@@ -45,7 +46,7 @@ const iterarApi = (dat) => {
       personajes.species,
       personajes.image
     );
-    personajesApi.show();
+    personajesApi.show(cards);
   });
 };
 
